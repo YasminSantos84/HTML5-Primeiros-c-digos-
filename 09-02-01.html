@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- cabeçalho de uma página HTML 5 -->
+<html>
+<!-- elemento raiz -->
+
+<head>
+    <!-- cabeçalho da página -->
+    <title> Cálculo do IMC </title>
+    <!-- título da página (Aba do navegador) -->
+    <meta charset="utf-8" />
+    <script>
+        function calcula() {
+            let peso, altura, imc
+                // observar que as variáveis não possuem tipo - a tipagem é dinâmica                
+                // vamos recuperar o peso e a altura informados pelo usuário                
+            peso = document.getElementById("peso").value
+                // recupera valor da caixa de entrada               
+            altura = document.getElementById("altura").value
+                // recupera valor da caixa de entrada                
+                // vamos calcular o imc                
+            imc = (peso / (altura ** 2))
+                // mostra o resultado para o usuário                
+                // innerHTML -> colocar um valor (texto) dentro de um elemento de marcação                
+            document.getElementById("resultado").innerHTML = `O IMC é ${imc.toFixed(2)}`
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- corpo da página -->
+    <h1> Cálculo do IMC - Índice de Massa Corporal</h1>
+    <!-- cabeçalho de nível 1-->=
+    <h2> Informe seu peso e sua altura </h2>
+    <!-- cabeçalho de nível 2 -->
+    <!-- caixa de entrada de dados do usuário -->
+    <p>
+        <!-- abertura de parágrafo -->
+        Peso <input type="number" id="peso" />
+    </p>
+    <p>
+        <!-- abertura de parágrafo -->
+        Altura <input type="number" id="altura" />
+    </p>
+    <p>
+        <!-- abertura de parágrafo -->
+        <button type="button" onClick="calcula()"> Calcula  </button>
+        <!-- botão que vai gerar um evento -->
+    </p>
+    <p id="resultado">
+        <!-- aqui virá o resultado -->
+        <!-- abertura de parágrafo com identificador -->
+    </p>
+</body>
+
+</html>

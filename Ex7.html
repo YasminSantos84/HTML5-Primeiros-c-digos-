@@ -1,0 +1,54 @@
+<!--Corrigir-->
+<!DOCTYPE html>
+<html>
+<!--Faça um programa que receba o peso de uma pessoa, calcule e mostre:-->
+<!--a)O novo peso se a pessoa engordar 15% sobre o peso digitado; -->
+<!--b)O novo peso se a pessoa emagrecer 20% sobre o peso digitado. -->
+
+<head>
+    <title>
+        Calculo de peso - Exercício 7
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let peso, NovoPesoA, NovoPesoB
+
+            peso = document.getElementById("peso").value
+
+            NovoPesoA = peso + (peso * (15 / 100))
+            NovoPesoB = peso - (peso * (20 / 100))
+
+            document.getElementById("NovoPesoA").innerHTML = NovoPesoA.toFixed(2)
+            document.getElementById("NovoPesoB").innerHTML = NovoPesoB.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Calculo de peso
+    </h1>
+    <h2>
+        Informe seu peso, o valor 1 corresponderá a um acrescimo de 15% e o valor 2 terá uma diminuição de 20%
+    </h2>
+
+    <p>
+        peso <input type="number" id="peso" />
+    </p>
+
+    <p>
+        <button type="button" onClick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="NovoPesoA">
+    </p>
+
+    <p id="NovoPesoB">
+    </p>
+
+</body>
+
+</html>

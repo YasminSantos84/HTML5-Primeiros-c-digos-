@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!--Faça um progrma que receba dois notas, calcule e mostre a média ponderada dessas notas,-->
+<!--considerando peso 2 para a prmeira nota e peso 3 para a segunda nota.-->
+
+<head>
+    <title>
+        Média ponderada - Exercício 4
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let nota1, nota2, resultado
+
+            nota1 = document.getElementById("nota1").value
+            nota2 = document.getElementById("nota2").value
+
+            resultado = ((nota1 * 2) + (nota2 * 3)) / (2 + 3)
+
+            document.getElementById("resultado").innerHTML = resultado.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Média de notas
+    </h1>
+    <h2>
+        Informe dois valores para serem calculados. Nota 1 = peso 2 e Nota 2 = peso 3.
+    </h2>
+
+    <p>
+        nota1 <input type="number" id="nota1" />
+    </p>
+
+    <p>
+        nota2<input type="number" id="nota2" />
+    </p>
+
+    <p>
+        <button type="button" onclick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="resultado">
+    </p>
+
+</body>
+
+</html>

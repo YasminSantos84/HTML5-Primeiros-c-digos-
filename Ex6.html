@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<!--Um funcionário recebe um salário fixo mais 4% de comissão sobre as vendas. Faça um programa que receba o salário -->
+<!--fixo de um funcionário e o valor de suas vendas. Calcule e mostre a comissão e o salário final do funcionário.-->
+
+<head>
+    <title>
+        Calculo de salario - Exercício 6
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let salarioFixo, ValordasVendas, ValordaComissao, resultado
+
+            salarioFixo = document.getElementById("salarioFixo").value
+            ValordasVendas = document.getElementById("ValordasVendas").value
+
+            ValordaComissao = ValordasVendas * 0.04
+            resultado = salarioFixo + (ValordasVendas * 0.04)
+
+            document.getElementById("ValordaComissao").innerHTML = `Valor da comissão é ${ValordaComissao}`
+            document.getElementById("resultado").innerHTML = `Valor do salário final é ${resultado}`
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Calculo do valor do salario e comissao.
+    </h1>
+    <h2>
+        Informe o salário e o valor total das vendas do vendedor.
+    </h2>
+
+    <p>
+        Salário Fixo <input type="number" id="salarioFixo" />
+    </p>
+
+    <p>
+        Valor das Vendas<input type="number" id="ValordasVendas" />
+    </p>
+
+    <p>
+        <button type="button" onclick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="ValordaComissao"></p>
+
+    <p id="resultado"></p>
+
+</body>
+
+</html>

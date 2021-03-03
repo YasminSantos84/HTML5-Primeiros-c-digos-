@@ -1,0 +1,47 @@
+<!--Finalizado-->
+<!DOCTYPE html>
+<html>
+<!--Faça um programa que receba o peso de uma pessoa em quilos, calcule e mostre esse peso em gramas.-->
+
+<head>
+    <title>
+        Conversão quilos para gramas - Exercício 8
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let quilos, gramas
+
+            quilos = document.getElementById("quilos").value
+
+            gramas = quilos * 1000
+
+            document.getElementById("gramas").innerHTML = gramas.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Quilos para Gramas
+    </h1>
+    <h2>
+        Informe o valor em quilos.
+    </h2>
+
+    <p>
+        quilos <input type="number" id="quilos" />
+    </p>
+
+    <p>
+        <button type="button" onClick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="gramas">
+    </p>
+
+</body>
+
+</html>

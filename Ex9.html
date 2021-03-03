@@ -1,0 +1,57 @@
+<!--Corrigir-->
+<!DOCTYPE html>
+<html>
+<!--Faça um programa que calcule e mostre a área de um trapézio.-->
+<!--Sabe-se que: A = ((base maior + base menor)*altura)/2 -->
+
+<head>
+    <title>
+        Área de um trapézio - Exercício 9
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let BaseMaior, BaseMenor, Altura, Area
+
+            BaseMaior = document.getElementById("BaseMaior").value
+            BaseMenor = document.getElementById("BaseMenor").value
+
+            Area = ((BaseMaior + BaseMenor) * Altura) / 2
+
+            document.getElementById("Area").innerHTML = Area.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Area de um trapézio
+    </h1>
+    <h2>
+        Informe os valores a seguir:
+    </h2>
+
+    <p>
+        BaseMaior <input type="number" id="BaseMaior" />
+    </p>
+
+    <p>
+        BaseMenor <input type="number" id="BaseMenor" />
+    </p>
+
+    <p>
+        Altura <input type="number" id="Altura" />
+    </p>
+
+    <p>
+        <button type="button" onClick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="Area">
+    </p>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!--Finalizado-->
+<!DOCTYPE html>
+<html>
+<!--Faça um progrma que receba dois números, calcule e mostre a divisão do primeiro número pelo segundo.-->
+<!--Sabe-se que o segundo número não pode ser zero, portanto não é necessário se preocupar com validações.-->
+
+<head>
+    <title>
+        Divisão de números - Exercício 3
+    </title>
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let numero1, numero2, resultado
+
+            numero1 = document.getElementById("numero1").value
+            numero2 = document.getElementById("numero2").value
+
+            resultado = numero1 / numero2
+
+            document.getElementById("resultado").innerHTML = resultado.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Divisão de números
+    </h1>
+    <h2>
+        Informe dois valores para serem divididos. O segundo número divide o primeiro.
+    </h2>
+
+    <p>
+        numero1 <input type="number" id="numero1" />
+    </p>
+
+    <p>
+        numero2<input type="number" id="numero2" />
+    </p>
+
+    <p>
+        <button type="button" onClick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="resultado">
+    </p>
+
+</body>
+
+</html>

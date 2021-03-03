@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Exercicio 4 da lista 1
+    </title>
+    <meta charset="uft-8" />
+    <script>
+        function calcula() {
+            //recupera os valores do usuári
+            let n1, n2, media //declarando uma variável sem tipo, pois a tipagem é dinâmica
+                //precisamos converter um número
+            n1 = Number(document.getElementById("nota1").value)
+            n2 = Number(document.getElementById("nota2").value)
+                //calcular a media
+            media = ((n1 * 2) + (n2 * 3)) / (2 + 3)
+                //mostrar resultado ao usuario
+            document.getElementById("resultado").innerHTML = media
+        }
+    </script>
+    <style>
+        /*aqui vem CSS*/
+        
+        #geral {
+            outline: blue 2px solid;
+            padding: 50px;
+            /*espaçamento 50*/
+        }
+        
+        .entrada {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="geral">
+        <h2>Exercicio 4 da lista 1</h2>
+        <h3>Informe duas notas</h3>
+        <div class="Entrada">
+            <!--divisão de área-->
+            <label for="nota1">Nota 1</label>
+            <input type="number" id="nota1" />
+        </div>
+        <div class="Entrada">
+            <!--divisão de área-->
+            <label for="nota2">Nota 2</label>
+            <input type="number" id="nota2" />
+        </div>
+        <div>
+            <button onclick="calcula()" type="button">Calcula</button>
+        </div>
+        <p id="resultado">
+        </p>
+    </div>
+</body>
+
+</html>

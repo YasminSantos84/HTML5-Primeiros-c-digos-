@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Exercicio 4 da lista 1
+    </title>
+    <meta charset="uft-8" />
+    <script>
+        function calcula() {
+            //recupera os valores do usuário
+            let n1, n2, media //declarando uma variável sem tipo, pois a tipagem é dinâmica
+                //precisamos converter um número
+            n1 = Number(document.getElementById("nota1").value)
+            n2 = Number(document.getElementById("nota2").value)
+                //calcular a media
+            media = ((n1 * 2) + (n2 * 3)) / (2 + 3)
+                //mostrar resultado ao usuario
+            document.getElementById("resultado").innerHTML = `A média é ${media}`
+            if (media >= 6) {
+                document.getElementById("resultado2").innerHTML = `Situação de aprovação direta`
+            } else if ((media >= 3) && (media < 6)) {
+                document.getElementById("resultado2").innerHTML = `Situação em exame. Informe a nota SUB`
+                document.getElementById("sub").innerHTML = `<label for = "sub"> SUB </label>
+                <input type= number" id="valorSub"/> <button onClick = "calculaSub()"> Calcula SUB </button>`
+            } else {
+                document.getElementById("resultado2").innerHTML = `Situação de reprovação direta`
+            }
+        }
+
+        function calculaSub() {
+            let sub = Number(document.getElementById("valorSub").value)
+            if (sub >= 6) {
+                document.getElementById("sub").innerHTML = `Situação de aprovação`
+            } else {
+                document.getElementById("sub").innerHTML = `Situação final de reprovação`
+            }
+        }
+    </script>
+    <style>
+        /*aqui vem CSS*/
+        
+        #container {
+            padding-left: 300px;
+            padding-top: 100px;
+        }
+        
+        #geral {
+            outline: blue 2px solid;
+            padding: 50px;
+            width: 300px
+            /*espaçamento 50*/
+        }
+        
+        .entrada {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #resultado,
+        #resultado2,
+        #sub {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="geral">
+            <h2>Exercício 4 da lista 1</h2>
+            <h3>Informe duas notas</h3>
+            <div class="entrada">
+                <label for="nota1"> Nota 1</label>
+                <input type="number" id="nota1">
+            </div>
+            <div class="entrada">
+                <label for="nota2"> Nota 2 </label>
+                <input type="number" id="nota2">
+            </div>
+            <div>
+                <button onclick="calcula()" type="button">Calcula</button>
+            </div>
+            <div id="resultado">
+            </div>
+            <div id="resultado2">
+            </div>
+            <div id="sub">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

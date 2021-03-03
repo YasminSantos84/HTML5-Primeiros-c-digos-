@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--Faça um programa que receba o preço de um produto. Calcule e mostre o novo preço, -->
+<!--sabendo-se que este sofreu um desconto de 10%.-->
+
+<head>
+    <title>
+        Desconto 10% - Exercício 5
+    </title>
+
+    <meta charset="utf-8" />
+
+    <script>
+        function calcula() {
+            let PrecoOriginal, NovoPreco
+
+            PrecoOriginal = document.getElementById("PrecoOriginal").value
+
+            NovoPreco = PrecoOriginal - ((PrecoOriginal * 10) / 100)
+
+            document.getElementById("NovoPreco").innerHTML = NovoPreco.toFixed(2)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>
+        Desconto do produto.
+    </h1>
+    <h2>
+        Informe o valor original do produto para que o desconto seja calculado.
+    </h2>
+
+    <p>
+        Preço original <input type="number" id="PrecoOriginal" />
+    </p>
+
+    <p>
+        <button type="button" onclick="calcula()"> Calcula </button>
+    </p>
+
+    <p id="NovoPreco">
+    </p>
+
+</body>
+
+</html>

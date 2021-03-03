@@ -1,0 +1,57 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <title>Calcule sua idade</title>
+    <meta charset="uft=8" />
+
+
+    <script>
+        function calcula() {
+            let AnoAtual, AnoNascimento, IA, IM, IS, ID
+
+            AnoAtual = document.getElementById("AnoAtual").value
+            AnoNascimento = document.getElementById("AnoNascimento").value
+
+            IA = AnoAtual - AnoNascimento
+            IM = IA * 12
+            IS = IM * 4
+            ID = IS * 7
+
+            document.getElementById("resultado1").innerHTML = IA.toFixed(0)
+            document.getElementById("resultado2").innerHTML = IM.toFixed(0)
+            document.getElementById("resultado3").innerHTML = IS.toFixed(0)
+            document.getElementById("resultado4").innerHTML = ID.toFixed(0)
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Cálculo de idade</h1>
+    <h2>Informe seu ano de nascimento e o ano atual:</h2>
+
+    <p>
+        AnoNascimento<input type="number" id="AnoNascimento" />
+    </p>
+
+    <p>
+        AnoAtual<input type="number" id="AnoAtual" />
+    </p>
+
+    <p>
+        <button type="button" onClick="calcula()"> Calcula </button>
+    </p>
+
+    <p>Idade em anos:</p>
+    <p id="resultado1"></p>
+    <p>Idade em meses:</p>
+    <p id="resultado2"></p>
+    <p>Idade em semanas:</p>
+    <p id="resultado3"></p>
+    <p>Idade em dias:</p>
+    <p id="resultado4"></p>
+
+</body>
+
+</html>
